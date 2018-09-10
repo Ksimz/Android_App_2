@@ -4,7 +4,7 @@ import './home_page.dart';
 import './Basket_Page.dart';
 
 void main() {
-  runApp(MaterialApp(title: "SIR'BILL FOODS", home: ViewBasket()));
+  runApp(MaterialApp(title: "SIR'BILL FOODS", home:   MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -13,6 +13,8 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
+  var Array1;
+  var Array2;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,21 +29,37 @@ class MyAppState extends State<MyApp> {
               accountEmail: new Text("kudziesimz@gmail.com"),
               decoration: new BoxDecoration(
                   image: new DecorationImage(
-                image:
-                    new ExactAssetImage("assets/585be1aa1600002400bdf2a6.jpeg"),
+                    image:
+                    new ExactAssetImage("assets/603267744-612x612.jpg"),
                     fit: BoxFit.cover,
-              )),
+                  )),
             ),
             new ListTile(
-                title: new Text("Home"), trailing: new Icon(Icons.home)),
+                title: new Text("Home"), trailing: new Icon(Icons.home),onTap: (){
+                Navigator.push(
+                   context,
+                 MaterialPageRoute(builder: (context) => OrderPage()),
+              );
+            },),
             new Divider(),
             new ListTile(
                 title: new Text("Shopping Basket"),
-                trailing: new Icon(Icons.add_shopping_cart)),
+                trailing: new Icon(Icons.add_shopping_cart),onTap:(){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ViewBasket(Array1,Array2)),
+              );
+            } ,),
+
             new Divider(),
             new ListTile(
                 title: new Text("View Orders"),
-                trailing: new Icon(Icons.fastfood)),
+                trailing: new Icon(Icons.fastfood),onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => OrderPage()),
+              );
+            },),
             new Divider(),
             new ListTile(
                 title: new Text("Close"), trailing: new Icon(Icons.close)),
@@ -55,7 +73,7 @@ class MyAppState extends State<MyApp> {
         children: <Widget>[
           Card(
               child: Image
-                  .asset("assets/585be1aa1600002400bdf2a6.jpeg")),
+                  .asset("assets/603267744-612x612.jpg")),
           Container(
             child: TextField(
               decoration: InputDecoration(labelText: "User Name"),

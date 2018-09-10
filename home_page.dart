@@ -173,7 +173,10 @@ class OrderPageState extends State<OrderPage> {
           Container(
             child: Center(
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ViewBasket(Basket,AddPrices)),
+                  );},
                   child: Text("View Basket"),
                 )),
             padding: const EdgeInsets.all(10.0),
