@@ -3,7 +3,7 @@ The was an application that would enable users to order food online at a local s
 
 <figure>
   <p>
-    <img src="Selection_001.png
+    <img src="Selection_001.png">
   </p>
   <figurecaption>Android Sales App Using Flutter And Dart</figurecaption>
 </figure>
