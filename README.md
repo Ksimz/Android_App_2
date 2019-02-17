@@ -6,5 +6,8 @@ The was an application that would enable users to order food online at a local s
     <img src="Selection_001.png">
     <img src="Selection_002.png">
   </p>
-  <figurecaption>Login Page</figurecaption>
+  <p>
+    <img src="Selection_003.png">
+    <img src="Selection_005.png">
+  </p>
 </figure>
